@@ -142,6 +142,6 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
-LOGIN_URL = '/'
-LOGIN_REDIRECT_URL = '/profile'
-SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
+LOGIN_URL = '/client/'
+LOGIN_REDIRECT_URL = '/client/profile/'
+# SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'

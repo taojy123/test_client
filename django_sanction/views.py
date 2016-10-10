@@ -39,6 +39,7 @@ def login(request, provider):
     exchanged for an access token and the user is redirected to 
     ``LOGIN_REDIRECT_URL`` after they have been logged in.
     """
+    print(request)
     if not isinstance(request.user, AnonymousUser):
         return redirect(settings.LOGIN_REDIRECT_URL)
 
