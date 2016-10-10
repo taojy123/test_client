@@ -34,19 +34,12 @@ class User(AbstractBaseUser):
     @staticmethod
     def fetch_weibo(client):
         print('access_token:', client.access_token)
-        resp = client.request('/email.json')
+        resp = client.request('/get_token_info')
         print(resp)
         normalized = {
-            'id': resp['id'],
-            'provider': 'facebook',
-            'email': resp['email'],
-            'first_name': resp['first_name'],
-            'last_name': resp['last_name'],
+            'id': resp['uid'],
+            'provider': 'weibo',
             'access_token': client.access_token,
-            # fb doesn't use the RFC-defined expires_in field, but uses
-            # expires. as such, we have to set this manually
-            'token_expires': mktime((datetime.utcnow() +
-                timedelta(seconds=int(client.expires))).timetuple()),
         }
         return User._get(normalized)
 
