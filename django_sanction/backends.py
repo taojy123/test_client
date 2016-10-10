@@ -29,6 +29,9 @@ class AuthenticationBackend(object):
                              data. This should match the keys used in your
                              settings file for ``SANCTION_PROVIDERS``.
         """
+
+        print('----- AuthenticationBackend authenticate ---------------')
+
         model = get_user_model()
         provider = settings.SANCTION_PROVIDERS[provider_key]
         

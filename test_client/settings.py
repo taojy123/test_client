@@ -127,7 +127,7 @@ SANCTION_PROVIDERS = {
     'weibo': {
         'auth_endpoint': 'https://api.weibo.com/oauth2/authorize',
         'token_endpoint': 'https://api.weibo.com/oauth2/access_token',
-        'resource_endpoint': 'https://api.weibo.com/2/account/profile/email.json',
+        'resource_endpoint': 'https://api.weibo.com/2/account/profile',
         'scope': 'email',
         'client_id': '3294908720',
         'client_secret': '758c4426b8d32df06a62166d49e34bb2',

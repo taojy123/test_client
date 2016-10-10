@@ -28,30 +28,13 @@ class User(AbstractBaseUser):
 
     @staticmethod
     def fetch_user(provider, client):
+        print('----------------- fetch_user ---------------------')
         return getattr(User, 'fetch_{}'.format(provider))(client)
 
     @staticmethod
-    def get_user(user_id):
-        return User.objects.get(id=user_id)
-
-    @staticmethod
-    def fetch_google(client):
-        resp = client.request('/userinfo')
-        normalized = {
-            'id': resp['id'],
-            'provider': 'google',
-            'email': resp['email'],
-            'first_name': resp['given_name'],
-            'last_name': resp['family_name'],
-            'access_token': client.access_token,
-            'token_expires': client.token_expires,
-            'refresh_token': client.refresh_token,
-        }
-        return User._get(normalized)
-
-    @staticmethod
-    def fetch_facebook(client):
-        resp = client.request('/me')
+    def fetch_weibo(client):
+        resp = client.request('/email.json')
+        print(resp)
         normalized = {
             'id': resp['id'],
             'provider': 'facebook',
@@ -62,9 +45,13 @@ class User(AbstractBaseUser):
             # fb doesn't use the RFC-defined expires_in field, but uses
             # expires. as such, we have to set this manually
             'token_expires': mktime((datetime.utcnow() +
-                                     timedelta(seconds=int(client.expires))).timetuple()),
+                timedelta(seconds=int(client.expires))).timetuple()),
         }
         return User._get(normalized)
+
+    @staticmethod
+    def get_user(user_id):
+        return User.objects.get(id=user_id)
 
     @staticmethod
     def _get(data):

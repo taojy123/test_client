@@ -78,12 +78,14 @@ def _login(request, provider):
                 'SANCTION_USE_CSRF=True but "state" not defined in GET')
             raise PermissionDenied
 
-        if not constant_time_compare(csrf.get_token(request), request.GET[
-            'state']):
-            logging.error('state GET param does not match session state')
-            raise PermissionDenied
+        # if not constant_time_compare(csrf.get_token(request), request.GET[
+        #     'state']):
+        #     logging.error('state GET param does not match session state')
+        #     raise PermissionDenied
 
+    print('=======================================')
     user = authenticate(code=request.GET['code'], provider_key=provider)
+    print('----------------------------------')
 
     if user is not None:
         request.session['__sp'] = provider 
