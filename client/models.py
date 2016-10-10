@@ -44,6 +44,18 @@ class User(AbstractBaseUser):
         return User._get(normalized)
 
     @staticmethod
+    def fetch_heyshop(client):
+        print('access_token:', client.access_token)
+        resp = client.request('/get_token_info', method='POST')
+        print(resp)
+        normalized = {
+            'id': resp['uid'],
+            'provider': 'weibo',
+            'access_token': client.access_token,
+        }
+        return User._get(normalized)
+
+    @staticmethod
     def get_user(user_id):
         return User.objects.get(id=user_id)
 
