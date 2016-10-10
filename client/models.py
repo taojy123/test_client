@@ -60,6 +60,7 @@ class User(AbstractBaseUser):
             provider.name = data['provider']
             provider.user = user
             provider.pid = data['id']
+            provider.access_token = data['access_token']
             provider.save()
 
         return provider.user
