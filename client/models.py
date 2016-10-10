@@ -53,20 +53,13 @@ class User(AbstractBaseUser):
             provider = Provider.objects.get(name=data['provider'],
                                             pid=data['id'])
         except Provider.DoesNotExist:
-            user = User.objects.create(username='{}_{}'.format(
-                data['provider'], data['id']),
-                first_name=data['first_name'],
-                last_name=data['last_name'])
+            user = User.objects.create(username='{}_{}'.format(data['provider'], data['id']))
             user.save()
 
             provider = Provider()
             provider.name = data['provider']
             provider.user = user
             provider.pid = data['id']
-            provider.email = data['email']
-            provider.access_token = data['access_token']
-            provider.token_expires = data['token_expires']
-            provider.refresh_token = data.get('refresh_token', None)
             provider.save()
 
         return provider.user
