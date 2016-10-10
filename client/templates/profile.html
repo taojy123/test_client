@@ -1,13 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <a href="/o/logout">logout</a>
+    <a href="/client/o/logout">logout</a>
     <ul>
-        <li>First name: {{ first_name }}</li>
-        <li>Last name: {{ last_name }}</li>
-        <li>Email: {{ email }}</li>
-        <li>Provider: {{ provider }}</li> 
-        <li>ID: {{ id }}</li>
-        <li>Provider ID: {{ pid }}</li>
+        <li>Username: {{ request.user.username }}</li>
+        <li>AccessToken: {{ provider.access_token }}</li>
     </ul>
 {% endblock %}
