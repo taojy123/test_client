@@ -135,7 +135,7 @@ SANCTION_PROVIDERS = {
     }
 }
 
-AUTH_USER_MODEL = 'core.User'
+AUTH_USER_MODEL = 'client.User'
 
 AUTHENTICATION_BACKENDS = (
     'django_sanction.backends.AuthenticationBackend',
