@@ -33,6 +33,7 @@ class User(AbstractBaseUser):
 
     @staticmethod
     def fetch_weibo(client):
+        print('access_token:', client.access_token)
         resp = client.request('/email.json')
         print(resp)
         normalized = {
