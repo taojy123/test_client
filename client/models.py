@@ -34,7 +34,7 @@ class User(AbstractBaseUser):
     @staticmethod
     def fetch_weibo(client):
         print('access_token:', client.access_token)
-        resp = client.request('/get_token_info')
+        resp = client.request('/get_token_info', method='POST')
         print(resp)
         normalized = {
             'id': resp['uid'],
