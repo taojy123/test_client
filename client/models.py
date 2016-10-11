@@ -33,7 +33,7 @@ class User(AbstractBaseUser):
 
     @staticmethod
     def fetch_weibo(client):
-        print('access_token:', client.access_token)
+        print('weibo access_token:', client.access_token)
         resp = client.request('/get_token_info', method='POST')
         print(resp)
         normalized = {
@@ -45,12 +45,10 @@ class User(AbstractBaseUser):
 
     @staticmethod
     def fetch_heyshop(client):
-        print('access_token:', client.access_token)
-        resp = client.request('/get_token_info', method='POST')
-        print(resp)
+        print('heyshop access_token:', client.access_token)
         normalized = {
-            'id': resp['uid'],
-            'provider': 'weibo',
+            'id': client.access_token,
+            'provider': 'heishop',
             'access_token': client.access_token,
         }
         return User._get(normalized)

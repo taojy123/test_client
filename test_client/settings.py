@@ -131,7 +131,16 @@ SANCTION_PROVIDERS = {
         'scope': 'email',
         'client_id': '3294908720',
         'client_secret': '758c4426b8d32df06a62166d49e34bb2',
-        'redirect_uri': 'http://taojy123.com:8000/client/o/login/weibo',
+        'redirect_uri': 'http://taojy123.com:8080/client/o/login/weibo',
+    },
+    'heyshop': {
+        'auth_endpoint': 'http://127.0.0.1:8000/api/oauth/authorize/',
+        'token_endpoint': 'http://127.0.0.1:8000/api/oauth/token/',
+        'resource_endpoint': 'http://127.0.0.1:8000/api',
+        'scope': 'write read',
+        'client_id': 'NwMiG3xolPXSG5ZK24R5FPWETDYmHj0Cr5mOjRd4',
+        'client_secret': 'X0GIDDIXQVEil7zgEoY2tfLJNdIo1PPhmsPQEaVOaEElVmKWSB6urgLSGYgPJ9AzQjIY41pj7IRWVASp2kGB3ZpDdLZK3IwJcirV3ZV6bU27sZrsZPQm2IHQ7xchY6Ib',
+        'redirect_uri': 'http://127.0.0.1:8080/client/o/login/',
     }
 }
 
