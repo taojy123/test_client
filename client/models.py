@@ -48,7 +48,7 @@ class User(AbstractBaseUser):
         print('heyshop access_token:', client.access_token)
         normalized = {
             'id': client.access_token,
-            'provider': 'heishop',
+            'provider': 'heyshop',
             'access_token': client.access_token,
         }
         return User._get(normalized)
