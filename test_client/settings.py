@@ -133,15 +133,24 @@ SANCTION_PROVIDERS = {
         'client_secret': '758c4426b8d32df06a62166d49e34bb2',
         'redirect_uri': 'http://taojy123.com:8080/client/o/login/weibo',
     },
+    # 'heyshop': {
+    #     'auth_endpoint': 'http://127.0.0.1:8000/api/oauthadmin/authorize/',
+    #     'token_endpoint': 'http://127.0.0.1:8000/api/oauthadmin/token/',
+    #     'resource_endpoint': 'http://127.0.0.1:8000/api',
+    #     'scope': 'article:write article:read',
+    #     'client_id': 'NwMiG3xolPXSG5ZK24R5FPWETDYmHj0Cr5mOjRd4',
+    #     'client_secret': 'X0GIDDIXQVEil7zgEoY2tfLJNdIo1PPhmsPQEaVOaEElVmKWSB6urgLSGYgPJ9AzQjIY41pj7IRWVASp2kGB3ZpDdLZK3IwJcirV3ZV6bU27sZrsZPQm2IHQ7xchY6Ib',
+    #     'redirect_uri': 'http://127.0.0.1:8080/client/o/login/heyshop/',
+    # },
     'heyshop': {
-        'auth_endpoint': 'http://127.0.0.1:8000/api/oauthadmin/authorize/',
-        'token_endpoint': 'http://127.0.0.1:8000/api/oauthadmin/token/',
-        'resource_endpoint': 'http://127.0.0.1:8000/api',
+        'auth_endpoint': 'http://demo.xiaoheidian.com/api/oauthadmin/authorize/',
+        'token_endpoint': 'http://demo.xiaoheidian.com/api/oauthadmin/token/',
+        'resource_endpoint': 'http://demo.xiaoheidian.com/api',
         'scope': 'article:write article:read',
         'client_id': 'NwMiG3xolPXSG5ZK24R5FPWETDYmHj0Cr5mOjRd4',
         'client_secret': 'X0GIDDIXQVEil7zgEoY2tfLJNdIo1PPhmsPQEaVOaEElVmKWSB6urgLSGYgPJ9AzQjIY41pj7IRWVASp2kGB3ZpDdLZK3IwJcirV3ZV6bU27sZrsZPQm2IHQ7xchY6Ib',
-        'redirect_uri': 'http://127.0.0.1:8080/client/o/login/heyshop/',
-    }
+        'redirect_uri': 'http://demo.xiaoheidian.com/client/o/login/heyshop/',
+    },
 }
 
 AUTH_USER_MODEL = 'client.User'
