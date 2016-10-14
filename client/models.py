@@ -44,6 +44,16 @@ class User(AbstractBaseUser):
         return User._get(normalized)
 
     @staticmethod
+    def fetch_local(client):
+        print('local access_token:', client.access_token)
+        normalized = {
+            'id': client.access_token,
+            'provider': 'local',
+            'access_token': client.access_token,
+        }
+        return User._get(normalized)
+
+    @staticmethod
     def fetch_heyshop(client):
         print('heyshop access_token:', client.access_token)
         normalized = {

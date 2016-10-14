@@ -15,8 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.shortcuts import redirect
+
+
+def home(request):
+    return redirect('/client/')
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^$', home),
     url(r'^client/', include('client.urls')),
 ]
