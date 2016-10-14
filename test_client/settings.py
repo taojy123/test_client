@@ -147,8 +147,8 @@ SANCTION_PROVIDERS = {
         'token_endpoint': 'http://demo.xiaoheidian.com/api/oauthadmin/token/',
         'resource_endpoint': 'http://demo.xiaoheidian.com/api',
         'scope': 'article:write article:read',
-        'client_id': 'NwMiG3xolPXSG5ZK24R5FPWETDYmHj0Cr5mOjRd4',
-        'client_secret': 'X0GIDDIXQVEil7zgEoY2tfLJNdIo1PPhmsPQEaVOaEElVmKWSB6urgLSGYgPJ9AzQjIY41pj7IRWVASp2kGB3ZpDdLZK3IwJcirV3ZV6bU27sZrsZPQm2IHQ7xchY6Ib',
+        'client_id': 'hY6HBpl4Qj5nHOS9DkKxybh2WDiLvQPGAX0EVvtS',
+        'client_secret': 'LAGc6FiK4YexPrGB1GZJcnJDjPiBTFN4BYLt7MRDCbxsYyrTOdFM6TYof8tP1JZXzCyXrQSK6MgaHSIsULiinEi1sfDzs4SLk9PAqFXVOud7vZ06Fu8L0ziA1FsTfjQ6',
         'redirect_uri': 'http://demo.xiaoheidian.com/client/o/login/heyshop/',
     },
 }
