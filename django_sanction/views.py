@@ -16,6 +16,7 @@ from django.core.exceptions import PermissionDenied
 from django.utils.crypto import constant_time_compare
 from django.middleware import csrf
 from django.middleware.csrf import CsrfViewMiddleware
+from django.http import HttpResponse
 
 from sanction import Client as SanctionClient
 
@@ -40,6 +41,11 @@ def login(request, provider):
     ``LOGIN_REDIRECT_URL`` after they have been logged in.
     """
     print(request)
+
+    error = request.GET.get('error')
+    if error:
+        return HttpResponse(error)
+
     if not isinstance(request.user, AnonymousUser):
         return redirect(settings.LOGIN_REDIRECT_URL)
 

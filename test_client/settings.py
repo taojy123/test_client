@@ -134,8 +134,8 @@ SANCTION_PROVIDERS = {
         'redirect_uri': 'http://taojy123.com:8080/client/o/login/weibo',
     },
     'local': {
-        'auth_endpoint': 'http://127.0.0.1:8000/api/oauthadmin/authorize/',
-        'token_endpoint': 'http://127.0.0.1:8000/api/oauthadmin/token/',
+        'auth_endpoint': 'http://127.0.0.1:8000/api/oauth/authorize/',
+        'token_endpoint': 'http://127.0.0.1:8000/api/oauth/token/',
         'resource_endpoint': 'http://127.0.0.1:8000/api',
         'scope': 'blogs:read blogs:write catalogue:read',
         'client_id': 'NwMiG3xolPXSG5ZK24R5FPWETDYmHj0Cr5mOjRd4',
@@ -143,13 +143,13 @@ SANCTION_PROVIDERS = {
         'redirect_uri': 'http://127.0.0.1:8080/client/o/login/local/',
     },
     'heyshop': {
-        'auth_endpoint': 'http://demo.xiaoheidian.com/api/oauthadmin/authorize/',
-        'token_endpoint': 'http://demo.xiaoheidian.com/api/oauthadmin/token/',
-        'resource_endpoint': 'http://demo.xiaoheidian.com/api',
+        'auth_endpoint': 'https://taojy.heidianer.com/api/oauth/authorize/',
+        'token_endpoint': 'https://taojy.heidianer.com/api/oauth/token/',
+        'resource_endpoint': 'https://taojy.heidianer.com/api',
         'scope': 'blogs:read blogs:write catalogue:read',
-        'client_id': 'hY6HBpl4Qj5nHOS9DkKxybh2WDiLvQPGAX0EVvtS',
-        'client_secret': 'LAGc6FiK4YexPrGB1GZJcnJDjPiBTFN4BYLt7MRDCbxsYyrTOdFM6TYof8tP1JZXzCyXrQSK6MgaHSIsULiinEi1sfDzs4SLk9PAqFXVOud7vZ06Fu8L0ziA1FsTfjQ6',
-        'redirect_uri': 'http://demo.xiaoheidian.com/client/o/login/heyshop/',
+        'client_id': 'NgM7pan9zTrd1Wgd0sMcwsxI69yxQrcO6iUb2QXP',
+        'client_secret': 'YcSusNk3TwDxFIGWmJiBHKbvuMbZe8HKzu3gSdrSqBIT1aq3xjN6k7NXB8EQ5OcHEuI11WD6Vznwodky0N855LF6X6VRI2f2YOnlqBvhkqstTfquytTSLcjGKgieLvkq',
+        'redirect_uri': 'http://127.0.0.1:8080/client/o/login/heyshop/',
     },
 }
 
